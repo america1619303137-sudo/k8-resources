@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: annotation-pod
+  labels:
+    app: nginx
+    env: dev
+  annotations:
+    buildurl: "https://jenkins.example.com/job/nginx-build/25/"
+    imageregistry: "https://registry.hub.docker.com/nginx"
+spec:
+  containers:
+  - name: nginx
+    image: nginx
