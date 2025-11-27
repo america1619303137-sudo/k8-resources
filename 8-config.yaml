@@ -1,7 +1,7 @@
-kind: CongifgMap
-apiversion: v1
+apiVersion: v1
+kind: ConfigMap
 metadata:
   name: config
 data:
-  courses: "kuberenets"
-  duration:
+  course: "kubernetes"
+  duration: "30days"
