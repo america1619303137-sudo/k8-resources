@@ -1,7 +1,7 @@
 kind: CongifgMap
 apiversion: v1
 metadata:
-  name: myconfig
+  name: config
 data:
   courses: "kuberenets"
   duration:
