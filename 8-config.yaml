@@ -1,4 +1,4 @@
-kind: congifgMap
+kind: CongifgMap
 apiversion: v1
 metadata:
   name: myconfig
