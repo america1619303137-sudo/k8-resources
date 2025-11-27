@@ -1,28 +1,26 @@
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
-  name: nginx 
-spec: 
+  name: nginx
+spec:
   selector:
     project: expense
     component: backend
-    environment:
+    environment: dev
   ports:
-  - protocol: TCP
-    port: 80
-    targetport: 80
+    - protocol: TCP
+      port: 80
+      targetPort: 80
 ---
-kind: Pod
 apiVersion: v1
+kind: Pod
 metadata:
   name: backend
   labels:
     project: expense
     component: backend
-    environment:
+    environment: dev
 spec:
-  containers: 
+  containers:
     - name: nginx
       image: nginx
- 
-
