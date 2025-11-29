@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: rs-web
+  labels:
+    app: frontend     # these labels are replicasets labels
+    tier: web
+spec:
+  replicas: 3         # modify replicas according to your case
+  selector:
+    matchLabels:
+      app: frontend   # replicasets use these labels to find the pods
+      tier: web
+  template:           # pod template
+    metadata:
+      labels:
+        app: frontend
+        tier: web
+    spec:
+      containers:
+      - name: web
+        image: ngin
