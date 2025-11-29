@@ -19,4 +19,4 @@ spec:
     spec:
       containers:
       - name: web
-        image: ngin
+        image: nginx
